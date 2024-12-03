@@ -1,0 +1,52 @@
+/home/arsonstan/.local/lib/python3.10/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+
+################ TRAINING ARGUMENTS ###################
+folder: outfolder
+data_folder: pickles
+idx_name: all
+target: ratio
+ES: no
+coords: cart
+loop: True
+pool: max
+in_layers: 3
+agg_layers: 2
+mp_layers: 2
+out_layers: 2
+hidden_dim: 64
+device: 0
+train_batches: 500
+train_batch_size: -1
+valid_batch_size: 400
+acc_rate: 1
+loss_func: abs_energy_fraction_loss
+num_classes: 1
+n_epochs: 100
+lr_sched: Const
+max_lr: 0.0001
+min_lr: 1e-07
+restart_period: 100
+gamma: None
+thresh: None
+reg: None
+epsilon: None
+minalpha: None
+warm: None
+semiparam: False
+graph_features: []
+#######################################################
+loading in features...
+	Took 1.833 seconds
+datalen is 56694
+batch size is 400
+ES is no and the number of features is 4
+Pooling with max
+Using self-loops
+There are 2 aggregation layers
+Traceback (most recent call last):
+  File "/home/arsonstan/Projects/HEP/DRN/The_DRN_for_HGCAL/./train", line 416, in <module>
+    trainer.predict()
+  File "/home/arsonstan/Projects/HEP/DRN/The_DRN_for_HGCAL/Train.py", line 346, in predict
+    checkpoint = glob.glob("%s/*.best.pth.tar" % checkfolder)[0]
+IndexError: list index out of range
