@@ -156,16 +156,9 @@ def energy_fraction_loss(pred, target, weight=None):
     truth  = target
     loss = torch.sum((pred-truth)**2)/batch_size
     #loss = torch.sum(abs(pred-truth)/(truth+0.01))/batch_size
-    # used for per-sensor energy weighting w/in cluster
-#    total_energy_cluster = torch.sqrt(energy*truth)
-    # get numer and denom terms for each shower
-#    numers = torch.sum(total_energy_cluster*(pred-truth)**2,axis=1)
-#    denoms = torch.sum(total_energy_cluster,axis=1)
-    # sum of weighted differences
-#    loss = torch.sum(numers/denoms)
     return loss
 
-def abs_energy_fraction_loss(pred, target, weight=None):
+def abs_energy_fraction_loss(pred, target, weight=None):  #Modified by Somanko to use mean square loss
 #    energy = target[:,0] ###Orig
 #    truth = target[:,1:] ###Orig
 #   energy = target[0]
@@ -175,13 +168,6 @@ def abs_energy_fraction_loss(pred, target, weight=None):
     #loss = torch.sum(torch.abs(pred-truth)/(torch.abs(truth)+0.01))/batch_size
    # loss = torch.sum((pred-truth)**2)/batch_size
     #loss = torch.sum(abs(pred-truth))/batch_size
-    # used for per-sensor energy weighting w/in cluster
-#    total_energy_cluster = torch.sqrt(energy*truth)
-    # get numer and denom terms for each shower
-#    numers = torch.sum(total_energy_cluster*(pred-truth)**2,axis=1)
-#    denoms = torch.sum(total_energy_cluster,axis=1)
-    # sum of weighted differences
-#    loss = torch.sum(numers/denoms)
     return loss
 
 def compressed_loss(pred, target, weight=None):
