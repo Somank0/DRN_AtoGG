@@ -4,7 +4,7 @@ The inputs given are the x,y,z, Et, Ez and subdetector flag (for endcaps and pre
 
 If the pickle maker is run on NSM area (Parambrahma), first run the following commands to set up the environment.
 
-'''
+```
 module load iiser/apps/cuda/11.4 
 
 module load cdac/spack/0.17
@@ -14,7 +14,7 @@ source /home/apps/spack/share/spack/setup-env.sh
 spack load python@3.8.2
 
 source /home/apps/iiser/pytorch-venv/bin/activate
-'''
+```
 
 To run the pickle maker 
 
