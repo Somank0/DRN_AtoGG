@@ -1,7 +1,7 @@
 # The_DRN_for_HGCAL
 
 To create the pickle files from ROOT trees:  
-> cd Picklemaker 
+> cd picklemaker 
  
 Change the relevant  paths of the input files and the output folder.   
 
@@ -27,4 +27,5 @@ The loss function is taken from models/GravNet.py.
 
 The default loss function (stated in "train")  is "abs_energy_fraction_loss" which is the mean square loss. It gets used by default when the "--nosemi" tag is used.  
 
-
+A sample slurm file is available inside the picklemaker. To submit the slurm job run the following:
+> sbatch submit.slurm
