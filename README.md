@@ -80,4 +80,4 @@ The loss function is taken from models/GravNet.py.
 
 Use the " --predict_only" tag if you have a pre-trained pytorch model and only want to run inference.
 
-
+> The *EB_best_model* and *EE_best_model* folders contain the weight files for Somanko's best model. 
